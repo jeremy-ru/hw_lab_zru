@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DBC029783049518F00C5F46F /* TempConverterApp */ = {
+		DBC029973049524D00C5F46F /* TempConverterApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TempConverterApp;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		DBC0296D3049518F00C5F46F = {
 			isa = PBXGroup;
 			children = (
-				DBC029783049518F00C5F46F /* TempConverterApp */,
+				DBC029973049524D00C5F46F /* TempConverterApp */,
 				DBC029773049518F00C5F46F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DBC029783049518F00C5F46F /* TempConverterApp */,
+				DBC029973049524D00C5F46F /* TempConverterApp */,
 			);
 			name = TempConverterApp;
 			packageProductDependencies = (
