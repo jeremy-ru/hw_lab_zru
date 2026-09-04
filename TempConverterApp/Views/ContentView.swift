@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Background Color - KEEPING BLUE
                 Color.blue
                     .edgesIgnoringSafeArea(.all)
                     .opacity(0.80)
@@ -22,7 +21,6 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     
-                    // Converted Temperature Display - Changed to black
                     if viewController.isConvertingCtoF {
                         Text("\(viewController.convertedTempString) °F")
                             .font(.largeTitle)
@@ -37,12 +35,10 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    // Label - Changed to black
                     Text("Enter Temperature:")
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                     
-                    // Input Field - Changed border to black, text to black
                     HStack {
                         TextField("temperature", text: $inputTemp)
                             .padding(.horizontal)
@@ -55,21 +51,21 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    // MARK: - Toggle with labels on both sides (spaced further apart)
+                    // MARK: - Toggle with labels on both sides
                     HStack {
                         Text("°F -> °C")
                             .foregroundColor(.black)
                             .fontWeight(.medium)
                         
                         Spacer()
-                            .frame(width: 30)  // Added space
+                            .frame(width: 30)
                         
                         Toggle("", isOn: $viewController.isConvertingCtoF)
                             .toggleStyle(SwitchToggleStyle(tint: .white))
                             .frame(width: 50)
                         
                         Spacer()
-                            .frame(width: 30)  // Added space
+                            .frame(width: 30)
                         
                         Text("°C -> °F")
                             .foregroundColor(.black)
@@ -78,7 +74,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    // Convert Button - Changed to black text
+                    // Convert Button
                     Button("Convert") {
                         viewController.setInputTempString(self.inputTemp)
                         viewController.convert()

@@ -33,22 +33,20 @@ class TempConverter {
     // MARK: - Temperature Validation
     func isBelowAbsoluteZero() -> Bool {
         if isConvertingCtoF {
-            // Converting C to F - absolute zero in Celsius is -273.15
+            // Converting C to F
             return inputTemp > -273
         } else {
-            // Converting F to C - absolute zero in Fahrenheit is -459.67
+            // Converting F to C
             return inputTemp > -460
         }
     }
     
     // MARK: - Conversion Functions
     private func celsiusToFahrenheit() {
-        // °F = (°C × 9/5) + 32
         convertedTemp = (inputTemp * 9 / 5) + 32
     }
     
     private func fahrenheitToCelsius() {
-        // °C = (°F - 32) × 5/9
         convertedTemp = (inputTemp - 32) * 5 / 9
     }
     
