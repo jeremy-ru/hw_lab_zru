@@ -12,6 +12,7 @@ struct BottomBar: View {
     
     var body: some View {
         HStack {
+            // Make sure five buttons spread evenly with Spacers.
             Button(action: viewModel.goBack) {
                 Image(systemName: "chevron.left")
             }

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// Actions the bottom-bar buttons can trigger
 enum WebViewOptions {
     case back
     case forward
@@ -17,9 +18,9 @@ enum WebViewOptions {
 }
 
 class ViewModel: ObservableObject {
-    @Published var urlString: String = ""
-    @Published var shouldShowShareSheet: Bool = false
-    @Published var webViewOptionsPublisher = PassthroughSubject<WebViewOptions, Never>()
+    @Published var urlString: String = "" // bound to SearchBar's TextField
+    @Published var shouldShowShareSheet: Bool = false // controls share sheet presentation
+    @Published var webViewOptionsPublisher = PassthroughSubject<WebViewOptions, Never>() // broadcasts button taps
     
     func goBack()    { webViewOptionsPublisher.send(.back) }
     func goForward() { webViewOptionsPublisher.send(.forward) }

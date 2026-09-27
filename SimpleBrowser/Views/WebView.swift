@@ -9,15 +9,18 @@ import SwiftUI
 import WebKit
 import Combine
 
+// Bridges UIKit's WKWebView into SwiftUI.
 struct WebView: UIViewRepresentable {
     @ObservedObject var viewModel: ViewModel
     
+    // Create the WKWebView once and assign the Coordinator as delegate
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
         return webView
     }
     
+    // Triggers when urlString changes; prepend https:// and load
     func updateUIView(_ webView: WKWebView, context: Context) {
         if let url = URL(string: "https://\(viewModel.urlString)") {
             webView.load(URLRequest(url: url))
@@ -28,6 +31,7 @@ struct WebView: UIViewRepresentable {
         Coordinator(webView: self)
     }
     
+    // Delegate + Combine subscriber for button taps
     class Coordinator: NSObject, WKNavigationDelegate {
         var parent: WebView
         var webViewOptionsSubscriber: AnyCancellable?
@@ -40,6 +44,7 @@ struct WebView: UIViewRepresentable {
             webViewOptionsSubscriber?.cancel()
         }
         
+        // On each new page load, subscribe to the ViewModel's publisher
         func webView(_ webView: WKWebView,
                      didStartProvisionalNavigation navigation: WKNavigation!) {
             webViewOptionsSubscriber = parent.viewModel.webViewOptionsPublisher
