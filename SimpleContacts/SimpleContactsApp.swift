@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SimpleContactsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView()
         }
+        // Registers Person with a persistent container for the whole app
+        .modelContainer(for: Person.self)
     }
 }
