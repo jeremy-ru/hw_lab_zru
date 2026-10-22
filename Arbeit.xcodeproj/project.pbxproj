@@ -6,6 +6,11 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB9BF06A308A173F0071727A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB9BF069308A173F0071727A /* FirebaseFirestore */; };
+		DB9BF06C308A17470071727A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = DB9BF06B308A17470071727A /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DB90D4E03089E93200BEC48D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -51,6 +56,8 @@
 		DB90D4CF3089E92F00BEC48D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				DB9BF06C308A17470071727A /* FirebaseCore in Frameworks */,
+				DB9BF06A308A173F0071727A /* FirebaseFirestore in Frameworks */,
 			);
 		};
 		DB90D4DC3089E93200BEC48D /* Frameworks */ = {
@@ -72,6 +79,7 @@
 				DB90D4D43089E92F00BEC48D /* Arbeit */,
 				DB90D4E23089E93200BEC48D /* ArbeitTests */,
 				DB90D4EC3089E93200BEC48D /* ArbeitUITests */,
+				DB9BF068308A173F0071727A /* Frameworks */,
 				DB90D4D33089E92F00BEC48D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +92,13 @@
 				DB90D4E93089E93200BEC48D /* ArbeitUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DB9BF068308A173F0071727A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +118,10 @@
 				DB90D4D43089E92F00BEC48D /* Arbeit */,
 			);
 			name = Arbeit;
+			packageProductDependencies = (
+				DB9BF069308A173F0071727A /* FirebaseFirestore */,
+				DB9BF06B308A17470071727A /* FirebaseCore */,
+			);
 			productName = Arbeit;
 			productReference = DB90D4D23089E92F00BEC48D /* Arbeit.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +200,9 @@
 			);
 			mainGroup = DB90D4C93089E92F00BEC48D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DB9BF067308A15830071727A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB90D4D33089E92F00BEC48D /* Products */;
 			projectDirPath = "";
@@ -295,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -352,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -376,6 +398,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +407,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zru.Arbeit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -407,6 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +442,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zru.Arbeit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -540,6 +570,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB9BF067308A15830071727A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB9BF069308A173F0071727A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB9BF067308A15830071727A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DB9BF06B308A17470071727A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB9BF067308A15830071727A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB90D4CA3089E92F00BEC48D /* Project object */;
 	validationLevel = 1;
