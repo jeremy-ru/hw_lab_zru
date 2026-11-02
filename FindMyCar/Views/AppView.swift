@@ -43,16 +43,6 @@ struct AppView: View {
                         // 2. If the GPS succeeds, show the popup
                         showingAlert = true
                     }
-                    
-                    // 3. SIMULATOR FIX: Wait 1.2 seconds. If the popup hasn't shown yet
-                    // (because the simulator GPS hung or failed), force the fallback and show it.
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                        if !showingAlert {
-                            // Force the fallback coordinates
-                            locationManager.coordinate = CarCoordinate(latitude: 40.445904, longitude: -79.943293)
-                            showingAlert = true
-                        }
-                    }
                 }) {
                     Label("Here's My Car", systemImage: "car.fill")
                         .font(.headline)

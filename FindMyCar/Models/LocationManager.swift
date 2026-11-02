@@ -141,20 +141,4 @@ extension LocationManager: CLLocationManagerDelegate {
         locationSaveCompletion?()
         locationSaveCompletion = nil
     }
-    
-    // Handles location errors
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("GPS Failed. Error: \(error.localizedDescription)")
-        
-        // If the app is authorized but the GPS fails (like in the simulator),
-        // we use the lab's CMU coordinates so the app works.
-        if authorizationStatus == .authorizedWhenInUse || authorizationStatus == .authorizedAlways {
-            coordinate = CarCoordinate(latitude: 40.445904, longitude: -79.943293)
-            saveLocationToPlist()
-            locationManager.stopUpdatingLocation()
-            
-            locationSaveCompletion?()
-            locationSaveCompletion = nil
-        }
-    }
 }
